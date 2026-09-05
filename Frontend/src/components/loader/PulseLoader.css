@@ -1,0 +1,79 @@
+.pulse-loader-container {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.5s ease;
+}
+
+.pulse-loader-container.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.pulse-loader-wrapper {
+  position: relative;
+  width: 220px;
+  max-width: 80vw;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Faint background track */
+.pulse-track-line {
+  opacity: 0.85;
+}
+
+/* Active sweeping pulse line matching the 4 frames */
+.pulse-active-line {
+  stroke-dasharray: 75 225;
+  stroke-dashoffset: 75;
+  animation: sweepHeartbeat 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: stroke-dashoffset, opacity;
+}
+
+@keyframes sweepHeartbeat {
+  /* Frame 1: Entering from left baseline */
+  0% {
+    stroke-dashoffset: 75;
+    opacity: 0.3;
+  }
+  15% {
+    opacity: 1;
+  }
+  /* Frames 2 & 3: Traveling through high peak and dip */
+  50% {
+    stroke-dashoffset: -75;
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  /* Frame 4: Exiting to right baseline and looping */
+  100% {
+    stroke-dashoffset: -225;
+    opacity: 0.3;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .pulse-active-line {
+    animation: none;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}

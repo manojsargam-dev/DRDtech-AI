@@ -1,0 +1,93 @@
+.benefits-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.benefit-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.benefit-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.benefit-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.benefit-text {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Theme 1: Orange/Peach */
+.benefit-theme-orange {
+  background-color: #fff4ea;
+  color: #c96510;
+}
+.benefit-theme-orange .benefit-icon-box {
+  background-color: rgba(201, 101, 16, 0.12);
+  color: #c96510;
+}
+
+/* Theme 2: Cyan */
+.benefit-theme-cyan {
+  background-color: #e6f9f9;
+  color: #0d8b8b;
+}
+.benefit-theme-cyan .benefit-icon-box {
+  background-color: rgba(13, 139, 139, 0.12);
+  color: #0d8b8b;
+}
+
+/* Theme 3: Pink */
+.benefit-theme-pink {
+  background-color: #feeef0;
+  color: #d6475a;
+}
+.benefit-theme-pink .benefit-icon-box {
+  background-color: rgba(214, 71, 90, 0.12);
+  color: #d6475a;
+}
+
+/* Theme 4: Indigo */
+.benefit-theme-indigo {
+  background-color: #eef1fc;
+  color: #3f51b5;
+}
+.benefit-theme-indigo .benefit-icon-box {
+  background-color: rgba(63, 81, 181, 0.12);
+  color: #3f51b5;
+}
+
+@media (max-width: 968px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}

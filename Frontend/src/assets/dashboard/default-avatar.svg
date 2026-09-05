@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#bdd6fc"/>
+      <stop offset="100%" stop-color="#98bbf5"/>
+    </radialGradient>
+  </defs>
+  <!-- Light Blue Gradient Background -->
+  <rect width="200" height="200" rx="100" fill="url(#bgGrad)"/>
+  
+  <!-- Silhouette Head -->
+  <circle cx="100" cy="78" r="40" fill="#3b76dc"/>
+  
+  <!-- Silhouette Shoulders & Body -->
+  <path d="M 22 200 C 22 148, 58 126, 100 126 C 142 126, 178 148, 178 200 Z" fill="#3b76dc"/>
+</svg>

@@ -1,0 +1,130 @@
+.faq-section {
+  padding: 90px 0;
+  background-color: #ffffff;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+/* Constellation Board */
+.faq-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-constellation-board {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.constellation-glow {
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(94, 187, 161, 0.12) 0%, rgba(240, 253, 250, 0) 70%);
+}
+
+.medical-icon-bubble {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(13, 148, 136, 0.2);
+  box-shadow: 0 8px 24px rgba(15, 118, 110, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d9488;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.medical-icon-bubble:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+  background-color: #0d9488;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(13, 148, 136, 0.25);
+}
+
+/* FAQ Content */
+.faq-title {
+  font-size: 2.25rem;
+  color: var(--text-heading);
+  margin-bottom: 32px;
+}
+
+.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-accordion-item {
+  border-radius: var(--radius-md);
+  background-color: #6e7eb5;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.faq-accordion-item:hover {
+  background-color: #6272aa;
+}
+
+.faq-accordion-item.faq-item-open {
+  background-color: #55659e;
+  box-shadow: 0 6px 20px rgba(59, 72, 154, 0.2);
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: none;
+  color: #ffffff;
+  text-align: left;
+  font-size: 0.96rem;
+  font-weight: 600;
+  gap: 16px;
+}
+
+.faq-chevron {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.faq-answer-panel {
+  padding: 0 24px 18px 24px;
+  animation: fadeIn 0.3s ease;
+}
+
+.faq-answer-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+@media (max-width: 968px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

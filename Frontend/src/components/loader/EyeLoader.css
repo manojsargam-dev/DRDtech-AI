@@ -1,0 +1,180 @@
+.eye-loader-container {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s ease;
+}
+
+.eye-loader-container.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.eye-loader-wrapper {
+  position: relative;
+  width: 480px;
+  max-width: 88vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medical-eye-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 4px 20px rgba(15, 23, 42, 0.06));
+}
+
+/* 1. CONTINUOUS ROTATING COLORFUL IRIS SPECTRUM RING */
+.iris-rotating-spectrum {
+  transform-origin: 300px 180px;
+  animation: rotateSpectrumRing 3.6s linear infinite;
+  will-change: transform;
+}
+
+@keyframes rotateSpectrumRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 2. INITIAL ENTRANCE & CONTINUOUS NATURAL EYE BLINK */
+.eyelid-blink-curtain {
+  pointer-events: none;
+}
+
+.upper-lid-curtain {
+  transform-origin: 300px 180px;
+  animation: upperLidBlink 4.8s cubic-bezier(0.45, 0.05, 0.25, 0.95) infinite;
+}
+
+.lower-lid-curtain {
+  transform-origin: 300px 180px;
+  animation: lowerLidBlink 4.8s cubic-bezier(0.45, 0.05, 0.25, 0.95) infinite;
+}
+
+/* Natural Eyelid Blink Timing (Calm human blink with ~3s open pause) */
+@keyframes upperLidBlink {
+  /* 0% to 58%: Eye is calmly open & analyzing */
+  0%, 58% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  /* 58% to 72%: Slow natural closing */
+  62% {
+    opacity: 1;
+  }
+  72%, 76% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  /* 76% to 90%: Smooth natural opening */
+  90% {
+    opacity: 1;
+  }
+  92%, 100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes lowerLidBlink {
+  /* 0% to 58%: Eye is calmly open & analyzing */
+  0%, 58% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  /* 58% to 72%: Slow natural closing */
+  62% {
+    opacity: 1;
+  }
+  72%, 76% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  /* 76% to 90%: Smooth natural opening */
+  90% {
+    opacity: 1;
+  }
+  92%, 100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+/* Subtle Eyelid Contour Flex during Blink */
+.main-upper-eyelid-path {
+  transform-origin: 300px 180px;
+  animation: upperContourFlex 4.8s cubic-bezier(0.45, 0.05, 0.25, 0.95) infinite;
+}
+
+.main-lower-eyelid-path {
+  transform-origin: 300px 180px;
+  animation: lowerContourFlex 4.8s cubic-bezier(0.45, 0.05, 0.25, 0.95) infinite;
+}
+
+@keyframes upperContourFlex {
+  0%, 58%, 92%, 100% {
+    transform: translateY(0) scaleY(1);
+  }
+  72%, 76% {
+    transform: translateY(14px) scaleY(0.75);
+  }
+}
+
+@keyframes lowerContourFlex {
+  0%, 58%, 92%, 100% {
+    transform: translateY(0) scaleY(1);
+  }
+  72%, 76% {
+    transform: translateY(-12px) scaleY(0.75);
+  }
+}
+
+/* Subtle entrance fade-in for crease lines */
+.eye-crease-line,
+.eye-lower-accent-line {
+  animation: subtleCreaseFade 1.2s ease-out forwards;
+}
+
+@keyframes subtleCreaseFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 3. ACCESSIBILITY: PREFERS-REDUCED-MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .iris-rotating-spectrum {
+    animation: none !important;
+  }
+
+  .upper-lid-curtain,
+  .lower-lid-curtain {
+    animation: none !important;
+    opacity: 0 !important;
+    transform: none !important;
+  }
+
+  .main-upper-eyelid-path,
+  .main-lower-eyelid-path,
+  .eye-crease-line,
+  .eye-lower-accent-line {
+    animation: none !important;
+    transform: none !important;
+  }
+}

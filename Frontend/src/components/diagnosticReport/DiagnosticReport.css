@@ -1,0 +1,543 @@
+/* ==========================================================================
+   DETAILED DIAGNOSTIC REPORT STYLING
+   Exact match to the DRDtech AI ophthalmic diagnostic report interface
+   Width configured to 3x/4 (75% of screen width x)
+   ========================================================================== */
+
+.diagnostic-report-page {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ==========================================================================
+   1. TOP APP BAR / HEADER (75vw / 3x/4 width)
+   ========================================================================== */
+.report-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  width: 100%;
+}
+
+.report-header-container {
+  width: 75vw;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.report-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.report-drd-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.report-brand-text {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.report-brand-text .bold-dr {
+  color: #0f172a;
+}
+
+.report-brand-text .teal-dtech {
+  color: #0d9488;
+}
+
+.report-brand-text .bold-ai {
+  color: #0284c7;
+}
+
+.report-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-profile-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #f1f5f9;
+  padding: 0.4rem 0.75rem 0.4rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+}
+
+.user-profile-pill .user-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.report-avatar-wrapper {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1.5px solid #0d9488;
+  background-color: #a9c6f8;
+  transition: transform 0.2s ease;
+}
+
+.report-avatar-wrapper:hover {
+  transform: scale(1.08);
+}
+
+.report-avatar-wrapper:hover .report-avatar-overlay {
+  opacity: 1;
+}
+
+.user-profile-pill .user-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.report-avatar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  color: #ffffff;
+}
+
+.btn-switch-back {
+  background: none;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-switch-back:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+/* ==========================================================================
+   2. MAIN BODY CONTENT (75vw / 3x/4 width)
+   ========================================================================== */
+.report-main-content {
+  flex: 1;
+  padding: 2.25rem 1.25rem 4rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.report-container {
+  width: 75vw;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ==========================================================================
+   TITLE ROW & FLOATING CONFIDENCE BADGE
+   ========================================================================== */
+.report-title-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.title-center-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.report-main-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f2b5c;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.report-subtitle-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0284c7;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.report-subtitle-wrap .dash-line {
+  color: #0284c7;
+  font-weight: bold;
+}
+
+.report-subtitle-wrap .subtitle-text {
+  color: #0284c7;
+}
+
+/* Confidence Card */
+.report-confidence-card {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 0.75rem 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.confidence-icon-box {
+  color: #007791;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confidence-text-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.conf-label {
+  font-size: 0.78rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.conf-value {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* Action Bar */
+.report-quick-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -0.5rem;
+  width: 100%;
+}
+
+.btn-action-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-action-back:hover {
+  background-color: #f8fafc;
+  border-color: #0d9488;
+  color: #0d9488;
+}
+
+.btn-action-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-action-secondary:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   REPORT CARDS GENERAL (WHITE BOXES WITH 3x/4 EXPANSION)
+   ========================================================================= */
+.report-card {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.card-title-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.card-title-header .dash-line {
+  color: #00838f;
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.card-section-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #00838f;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.teal-accent-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   SECTION 1 & 3: TWO COLUMN IMAGES GRID (SCALED FOR 3x/4)
+   ========================================================================== */
+.two-column-images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  width: 100%;
+}
+
+.image-column-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.retina-image-frame {
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1 / 1;
+  background-color: #000000;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+
+.report-retina-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-caption-label {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #334155;
+  text-align: center;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 2: GRADE OUTPUT & PIE/DONUT CHART (SCALED FOR 3x/4)
+   ========================================================================== */
+.grade-output-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* Left Grades List */
+.grades-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.grade-row-item {
+  background-color: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.85rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.grade-row-item:hover {
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+.grade-left-info {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+.grade-number-badge {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0284c7;
+  width: 20px;
+  text-align: center;
+}
+
+.grade-label-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.grade-percent-value {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* Right Donut / Pie Chart (Expanded & Crisp) */
+.donut-chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.donut-chart-wrapper {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donut-svg {
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.07));
+}
+
+.donut-segment {
+  transition: stroke-width 0.3s ease;
+}
+
+.donut-center-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT FOR SMALLER SCREENS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .report-container,
+  .report-header-container {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .report-container,
+  .report-header-container {
+    width: 94vw;
+  }
+
+  .report-title-row {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .report-confidence-card {
+    position: static;
+    transform: none;
+  }
+
+  .two-column-images-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .grade-output-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .report-card {
+    padding: 1.5rem;
+  }
+}
