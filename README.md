@@ -1,4 +1,4 @@
-# 🩺 DRDTech AI - Full-Stack Diabetic Retinopathy Detection System.
+# 🩺 DRDtechAI - Full-Stack Diabetic Retinopathy Detection System.
 
 An end-to-end AI-powered Medical Diagnostic Platform designed for automated **Diabetic Retinopathy (DR) grading**, **Grad-CAM explainability heatmaps**, and **retinal blood vessel segmentation** from fundus photographs.
 
@@ -6,7 +6,7 @@ An end-to-end AI-powered Medical Diagnostic Platform designed for automated **Di
 
 ## 🌟 System Overview
 
-The **DRDTech AI** ecosystem consists of three integrated microservices:
+The **DRDtechAI** ecosystem consists of three integrated microservices:
 
 ```mermaid
 graph TD
@@ -49,10 +49,10 @@ To clone and run the full stack application, follow the step-by-step instruction
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-username/DRDTech-AI.git
+$ git clone https://github.com/your-username/DRDtech-AI.git
 
 # Navigate into the project root
-$ cd "DRDTech AI V1.0"
+$ cd "DRDtechAI"
 ```
 
 ---
@@ -61,13 +61,15 @@ $ cd "DRDTech AI V1.0"
 
 ```bash
 # Go into the AI server directory
-$ cd DR_AI_SERVER
+$ cd ML
 
 # Create and activate virtual environment
 $ python -m venv venv
 
 # Windows (PowerShell):
 $ .\venv\Scripts\Activate.ps1
+# Windows (cmd):
+$ \venv\Scripts\activate
 # Linux / macOS / Bash:
 $ source venv/bin/activate
 
@@ -86,7 +88,7 @@ Open a new terminal window:
 
 ```bash
 # Go into the Backend directory
-$ cd "DRDTech AI V1.0/Backend"
+$ cd "DRDtechAI/Backend"
 
 # Install Node dependencies
 $ npm install
@@ -106,7 +108,7 @@ Open a third terminal window:
 
 ```bash
 # Go into the Frontend directory
-$ cd "DRDTech AI V1.0/Frontend"
+$ cd "DRDtechAI/Frontend"
 
 # Install dependencies
 $ npm install
@@ -130,7 +132,7 @@ Open `http://localhost:5173` in your browser to access the application.
 ### `Backend/.env`
 ```env
 PORT=3000
-MONGO_URI=mongodb://localhost:27017/RetinalAI
+MONGO_URI=your_mongodb_cluster_uri
 SECRET=your_jwt_secret_key
 EXPIRES=7d
 CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
