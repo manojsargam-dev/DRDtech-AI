@@ -23,6 +23,9 @@ __pycache__/
 *.pyc
 
 
+models/*.h5
+models/*.hdf5
+
 
 # Environment/secrets
 .env
