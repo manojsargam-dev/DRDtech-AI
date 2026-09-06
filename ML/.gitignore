@@ -22,9 +22,10 @@ venv/
 __pycache__/
 *.pyc
 
-models/*.keras
+
 models/*.h5
 models/*.hdf5
+
 
 # Environment/secrets
 .env
