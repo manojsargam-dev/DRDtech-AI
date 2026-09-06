@@ -49,7 +49,8 @@ To clone and run the full stack application, follow the step-by-step instruction
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-username/DRDtech-AI.git
+$ git clone https://github.com/manojsargam-dev/DRDtech-AI.git
+# Wait little time for downloading model
 
 # Navigate into the project root
 $ cd "DRDtechAI"
