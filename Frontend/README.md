@@ -1,6 +1,6 @@
-# 👁️ DRDTech AI - Frontend Web Application
+# 👁️ DRDtech AI - Frontend Web Application
 
-A modern, responsive, and interactive diagnostic web application for the **DRDTech AI** Retinal Analysis platform. Built with **React 19**, **Vite**, and clean **Vanilla CSS**, it provides an intuitive interface for clinicians to register patients, upload fundus scans, and inspect AI-driven Diabetic Retinopathy diagnoses with Grad-CAM heatmaps and blood vessel segmentation.
+A modern, responsive, and interactive diagnostic web application for the **DRDtech AI** Retinal Analysis platform. Built with **React 19**, **Vite**, and clean **Vanilla CSS**, it provides an intuitive interface for clinicians to register patients, upload fundus scans, and inspect AI-driven Diabetic Retinopathy diagnoses with Grad-CAM heatmaps and blood vessel segmentation.
 
 ---
 
@@ -45,10 +45,10 @@ To clone and run this application, you'll need Git and Node.js (which comes with
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-username/DRDTech-AI.git
+$ git clone https://github.com/your-username/DRDtech-AI.git
 
 # Go into the frontend directory
-$ cd "DRDTech AI V1.0/Frontend"
+$ cd "DRDtech AI V1.0/Frontend"
 
 # Install dependencies
 $ npm install
