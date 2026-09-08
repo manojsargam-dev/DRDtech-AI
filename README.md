@@ -18,7 +18,13 @@ graph TD
     AI -->|Returns DR Stage, Grad-CAM & Vessel Masks| Backend
     Backend -->|Aggregated Report| Frontend
 ```
+```
 
+1. **[Frontend](file:///d:/DRDTech%20AI%20V1.0/Frontend/README.md)**: Modern, responsive React 19 web application for patient intake, scan upload, and diagnostic report visualization.
+2. **[Backend](file:///d:/DRDTech%20AI%20V1.0/Backend/README.md)**: Node.js / Express / TypeScript API server handling user authentication, patient records, Cloudinary storage, and ML workflow orchestration.
+3. **[DR_AI_SERVER](file:///d:/DRDTech%20AI%20V1.0/DR_AI_SERVER/README.md)**: Python / FastAPI deep learning microservice hosting fine-tuned **ResNet-101** (APTOS dataset) and **U-Net** (DRIVE dataset) models.
+
+---
 ## 🚀 Key Features
 
 - **Automated Diabetic Retinopathy Classification**: 5-stage clinical severity grading (No DR, Mild, Moderate, Severe, Proliferative DR) using fine-tuned ResNet-101.
