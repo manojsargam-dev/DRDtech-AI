@@ -50,21 +50,22 @@ To clone and run this application, you'll need Git and Python installed on your 
 $ git clone https://github.com/your-username/DRDTech-AI.git
 
 # Go into the AI server directory
-$ cd "DRDTech AI V1.0/DR_AI_SERVER"
+$ cd ML
 
-# Create a virtual environment
+# Create and activate virtual environment
 $ python -m venv venv
 
-# Activate the virtual environment
-# On Windows (PowerShell):
+# Windows (PowerShell):
 $ .\venv\Scripts\Activate.ps1
-# On Linux / macOS / Bash:
+# Windows (cmd):
+$ venv\Scripts\activate
+# Linux / macOS / Bash:
 $ source venv/bin/activate
 
-# Install dependencies
+# Install Python dependencies
 $ pip install -r requirements.txt.utf8
 
-# Start the AI microservice
+# Run the AI server (starts on http://localhost:8000)
 $ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
