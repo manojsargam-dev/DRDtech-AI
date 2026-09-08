@@ -70,7 +70,7 @@ $ python -m venv venv
 # Windows (PowerShell):
 $ .\venv\Scripts\Activate.ps1
 # Windows (cmd):
-$ \venv\Scripts\activate
+$ venv\Scripts\activate
 # Linux / macOS / Bash:
 $ source venv/bin/activate
 
