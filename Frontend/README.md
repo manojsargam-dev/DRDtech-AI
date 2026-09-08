@@ -1,6 +1,6 @@
 # 👁️ DRDtech AI - Frontend Web Application
 
-A modern, responsive, and interactive diagnostic web application for the **DRDtech AI** Retinal Analysis platform. Built with **React 19**, **Vite**, and clean **Vanilla CSS**, it provides an intuitive interface for clinicians to register patients, upload fundus scans, and inspect AI-driven Diabetic Retinopathy diagnoses with Grad-CAM heatmaps and blood vessel segmentation.
+A modern, responsive, and interactive Detection  web application for the **DRDtech AI** Retinal Analysis platform. Built with **React 19**, **Vite**, and clean **Vanilla CSS**, it provides an intuitive interface for clinicians to register patients, upload fundus scans, and inspect AI-driven Diabetic Retinopathy diagnoses with Grad-CAM heatmaps and blood vessel segmentation.
 
 ---
 
@@ -11,7 +11,7 @@ A modern, responsive, and interactive diagnostic web application for the **DRDte
 - **Doctor & User Authentication**: Seamless modal-based Sign In / Sign Up flows with secure JWT token state management.
 - **Structured Patient Intake Form**: Simple and comprehensive form to record patient vitals, medical history, and scan metadata before testing.
 - **Drag-and-Drop Retinal Image Upload**: Instant image selection with live preview and validation for fundus retinal photographs.
-- **Real-Time AI Diagnostic Dashboard**:
+- **Real-Time AI Detection  Dashboard**:
   - 🔍 **Original Fundus Scan Viewer** with zoom and high-resolution inspection.
   - 📊 **Diabetic Retinopathy Grading**: Categorized across 5 clinical stages (No DR, Mild, Moderate, Severe, Proliferative) with confidence percentages.
   - 🧠 **Grad-CAM Heatmap Visualization**: Highlights pathological areas (microaneurysms, hemorrhages, hard exudates) driving the AI prediction.
@@ -98,7 +98,7 @@ Frontend/
 │   ├── components/         # Modular UI components
 │   │   ├── auth/           # Login & Register modals
 │   │   ├── benefits/       # Benefits section
-│   │   ├── diagnosticReport/# AI Results visualizer & analysis dashboard
+│   │   ├── Detection Report/# AI Results visualizer & analysis dashboard
 │   │   ├── faq/            # FAQ accordion component
 │   │   ├── features/       # Feature highlights
 │   │   ├── footer/         # Footer navigation
