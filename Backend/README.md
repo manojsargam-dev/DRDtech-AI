@@ -1,6 +1,6 @@
-# 🏥 DRDTech AI - Backend API Service
+# 🏥 DRDtech AI - Backend API Service
 
-A robust, type-safe REST API server powering the **DRDTech AI** Retinal Disease Diagnostic platform. Built with **Node.js**, **Express.js**, and **TypeScript**, it handles user authentication, patient records management, cloud retinal scan storage, and orchestrates deep learning inference with the AI microservice.
+A robust, type-safe REST API server powering the **DRDtech AI** Retinal Disease Diagnostic platform. Built with **Node.js**, **Express.js**, and **TypeScript**, it handles user authentication, patient records management, cloud retinal scan storage, and orchestrates deep learning inference with the AI microservice.
 
 ---
 
@@ -43,10 +43,10 @@ To clone and run this application, you'll need Git and Node.js (which comes with
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-username/DRDTech-AI.git
+$ git clone https://github.com/manojsargam-dev/DRDtech-AI.git
 
-# Go into the backend directory
-$ cd "DRDTech AI V1.0/Backend"
+# Go into the Backend directory
+$ cd "DRDtechAI/Backend"
 
 # Install dependencies
 $ npm install
