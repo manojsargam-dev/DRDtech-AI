@@ -1,4 +1,4 @@
-# 🧠 DR_AI_SERVER - Retinal AI Diagnostic Engine
+# 🧠 DR_AI_SERVER - DR Detection Engine
 
 A high-performance **Deep Learning Microservice** built with **FastAPI**, **TensorFlow/Keras**, and **OpenCV**. It delivers automated **Diabetic Retinopathy (DR) grading**, **Grad-CAM explainability heatmaps**, and **retinal blood vessel segmentation** from fundus photographs.
 
