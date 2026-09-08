@@ -1,6 +1,6 @@
 <h1>
     <img  src = "https://github.com/manojsargam-dev/DRDtech-AI/blob/main/Icons/logo2.png" height = "40" width = "40" alt="image" style = "vertical-align:middle;"></img>
-    DRDtech AI
+    <P>DRDtechAI</P>
 </h1>
 
 # Full-Stack Diabetic Retinopathy Detection System.
