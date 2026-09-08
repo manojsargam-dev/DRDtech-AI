@@ -12,7 +12,7 @@ A robust, type-safe REST API server powering the **DRDtech AI** Retinal Disease 
 - **Cloud Image Pipeline**: Multer middleware paired with [Cloudinary](https://cloudinary.com/) for secure retinal fundus image uploads and storage.
 - **AI Microservice Orchestration**: Seamless integration with `DR_AI_SERVER` (FastAPI) to trigger Diabetic Retinopathy grading and vessel segmentation.
 - **Diagnostic Reports Management**: Aggregates AI predictions, severity confidence, Grad-CAM heatmap URLs, and vessel masks directly into patient histories.
-- **Email Notifications**: Integrated [Nodemailer](https://nodemailer.com/) service for automated diagnostic alerts and report delivery.
+
 
 ---
 
