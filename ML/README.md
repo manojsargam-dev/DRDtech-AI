@@ -15,7 +15,7 @@ A high-performance **Deep Learning Microservice** built with **FastAPI**, **Tens
     - `4` - Proliferative Diabetic Retinopathy
 - **Explainable AI (Grad-CAM)**: Generates Gradient-weighted Class Activation Mapping ([Grad-CAM](https://arxiv.org/abs/1610.02391)) overlays highlighting the anatomical lesions (exudates, hemorrhages) influencing model predictions.
 - **Retinal Blood Vessel Segmentation**: Implements a deep [U-Net](https://arxiv.org/abs/1505.04597) convolutional network trained on the [DRIVE](https://drive.grand-challenge.org/) dataset to segment the retinal microvasculature.
-- **Flexible Dual Ingestion**: Supports both direct multipart file uploads (`multipart/form-data`) and remote image URLs (Cloudinary, AWS S3, etc.).
+- **Flexible Dual Ingestion**: Supports both direct multipart file uploads (`multipart/form-data`) and remote image URLs (Cloudinary,etc).
 - **Async High-Throughput API**: Built with [FastAPI](https://fastapi.tiangolo.com/) and [Uvicorn](https://www.uvicorn.org/) for fast, asynchronous inference requests.
 - **Static Artifact Delivery**: Built-in static file server to deliver generated Grad-CAM heatmaps, vessel masks, and preprocessed scans via `/outputs`.
 
