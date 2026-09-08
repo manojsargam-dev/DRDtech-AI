@@ -19,11 +19,9 @@ graph TD
     Backend -->|Aggregated Report| Frontend
 ```
 ---
-
 1. **[Frontend](https://github.com/manojsargam-dev/DRDtech-AI/blob/main/Frontend/README.md)**: Modern, responsive React 19 web application for patient intake, scan upload, and Detection  report visualization.
 2. **[Backend](https://github.com/manojsargam-dev/DRDtech-AI/blob/main/Backend/README.md)**: Node.js / Express / TypeScript API server handling user authentication, patient records, Cloudinary storage, and ML workflow orchestration.
 3. **[ML](https://github.com/manojsargam-dev/DRDtech-AI/blob/main/ML/README.md)**: Python / FastAPI deep learning microservice hosting fine-tuned **ResNet-101** (APTOS dataset) and **U-Net** (DRIVE dataset) models.
----
 ---
 ## 🚀 Key Features
 
