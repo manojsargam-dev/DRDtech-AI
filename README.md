@@ -1,8 +1,4 @@
-<h1>
-    <img  src = "https://github.com/manojsargam-dev/DRDtech-AI/blob/main/Icons/logo2.png" height = "30" width = "30" alt="image" style = "vertical-align:middle;">DRDtechAI</img>
-</h1>
-
-# Full-Stack Diabetic Retinopathy Detection System.
+# <img  src = "https://github.com/manojsargam-dev/DRDtech-AI/blob/main/Icons/logo2.png" height = "35" width = "35" alt="image"></img> DRDtechAI - Full-Stack Diabetic Retinopathy Detection System.
 
 An end-to-end AI-powered Medical Detection  Platform designed for automated **Diabetic Retinopathy (DR) grading**, **Grad-CAM explainability heatmaps**, and **retinal blood vessel segmentation** from fundus photographs.
 
