@@ -1,5 +1,5 @@
 <h1>
-    <img  src = "https://github.com/manojsargam-dev/DRDtech-AI/blob/main/Icons/logo2.png" height = "30" width = "40" alt="image" style = "vertical-align:middle;">DRDtechAI</img>
+    <img  src = "https://github.com/manojsargam-dev/DRDtech-AI/blob/main/Icons/logo2.png" height = "50" width = "50" alt="image" style = "vertical-align:middle;">DRDtechAI</img>
 </h1>
 
 # Full-Stack Diabetic Retinopathy Detection System.
