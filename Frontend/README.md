@@ -45,10 +45,10 @@ To clone and run this application, you'll need Git and Node.js (which comes with
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-username/DRDtech-AI.git
+$ git clone https://github.com/manojsargam-dev/DRDtech-AI.git
 
-# Go into the frontend directory
-$ cd "DRDtech AI V1.0/Frontend"
+# Go into the Frontend directory
+$ cd "DRDtechAI/Frontend"
 
 # Install dependencies
 $ npm install
