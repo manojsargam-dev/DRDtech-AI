@@ -1,4 +1,4 @@
-# 🧠 DR_AI_SERVER - DR Detection Engine
+# 🧠 DR_AI_SERVER - DR Diagnosis Engine
 
 A high-performance **Deep Learning Microservice** built with **FastAPI**, **TensorFlow/Keras**, and **OpenCV**. It delivers automated **Diabetic Retinopathy (DR) grading**, **Grad-CAM explainability heatmaps**, and **retinal blood vessel segmentation** from fundus photographs.
 
@@ -6,7 +6,7 @@ A high-performance **Deep Learning Microservice** built with **FastAPI**, **Tens
 
 ## 🚀 Key Features
 
-- **Diabetic Retinopathy Classification**: Powered by a fine-tuned [ResNet-101](https://keras.io/api/applications/resnet/) model trained on the [APTOS 2019 Blindness Detection](https://www.kaggle.com/c/aptos2019-blindness-detection) dataset.
+- **Diabetic Retinopathy Classification**: Powered by a fine-tuned [ResNet-101](https://keras.io/api/applications/resnet/) model trained on the [APTOS 2019 Blindness Diagnosis](https://www.kaggle.com/c/aptos2019-blindness-detection) dataset.
   - Classifies retinal scans across 5 clinical stages:
     - `0` - No Diabetic Retinopathy
     - `1` - Mild
