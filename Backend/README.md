@@ -1,6 +1,6 @@
 # 🏥 DRDtech AI - Backend API Service
 
-A robust, type-safe REST API server powering the **DRDtech AI** Retinal Disease Detection  platform. Built with **Node.js**, **Express.js**, and **TypeScript**, it handles user authentication, patient records management, cloud retinal scan storage, and orchestrates deep learning inference with the AI microservice.
+A robust, type-safe REST API server powering the **DRDtech AI** Retinal Disease Diagnosis  platform. Built with **Node.js**, **Express.js**, and **TypeScript**, it handles user authentication, patient records management, cloud retinal scan storage, and orchestrates deep learning inference with the AI microservice.
 
 ---
 
@@ -8,10 +8,10 @@ A robust, type-safe REST API server powering the **DRDtech AI** Retinal Disease 
 
 - **Robust REST API**: Built on Express 5 and TypeScript with complete type safety and modular MVC architecture.
 - **Secure Authentication & Authorization**: JSON Web Token (JWT) in HTTP-only cookies, password encryption via [bcrypt](https://www.npmjs.com/package/bcrypt), and role-aware protected routes.
-- **Patient Intake & Medical Records**: MongoDB schemas for managing patient demographics, clinical notes, and historical Detection  scans.
+- **Patient Intake & Medical Records**: MongoDB schemas for managing patient demographics, clinical notes, and historical Diagnosis  scans.
 - **Cloud Image Pipeline**: Multer middleware paired with [Cloudinary](https://cloudinary.com/) for secure retinal fundus image uploads and storage.
 - **AI Microservice Orchestration**: Seamless integration with `DR_AI_SERVER` (FastAPI) to trigger Diabetic Retinopathy grading and vessel segmentation.
-- **Detection  Reports Management**: Aggregates AI predictions, severity confidence, Grad-CAM heatmap URLs, and vessel masks directly into patient histories.
+- **Diagnosis  Reports Management**: Aggregates AI predictions, severity confidence, Grad-CAM heatmap URLs, and vessel masks directly into patient histories.
 
 
 ---
@@ -97,7 +97,7 @@ Configure the following environment variables:
 > Populate your `.env` keys with their respective values before starting the server. Ensure that MongoDB is running and accessible.
 
 > [!NOTE]
-> Make sure the **DR_AI_SERVER** is running at `ML_SERVICE_URL` (`http://localhost:8000`) so that image Detection  requests can be processed successfully.
+> Make sure the **DR_AI_SERVER** is running at `ML_SERVICE_URL` (`http://localhost:8000`) so that image Diagnosis  requests can be processed successfully.
 
 ---
 
