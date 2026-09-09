@@ -1,6 +1,6 @@
-# <img  src = "https://github.com/manojsargam-dev/DRDtech-AI/blob/main/Icons/logo2.png" height = "40" width = "40" alt="image"></img> DRDtechAI - Full-Stack Diabetic Retinopathy Detection System.
+# <img  src = "https://github.com/manojsargam-dev/DRDtech-AI/blob/main/Icons/logo2.png" height = "40" width = "40" alt="image"></img> DRDtechAI - Full-Stack Diabetic Retinopathy Diagnosis System.
 
-An end-to-end AI-powered Medical Detection  Platform designed for automated **Diabetic Retinopathy (DR) grading**, **Grad-CAM explainability heatmaps**, and **retinal blood vessel segmentation** from fundus photographs.
+An end-to-end AI-powered Medical Diagnosis Platform designed for automated **Diabetic Retinopathy (DR) grading**, **Grad-CAM explainability heatmaps**, and **retinal blood vessel segmentation** from fundus photographs.
 
 ---
 
@@ -19,18 +19,18 @@ graph TD
     Backend -->|Aggregated Report| Frontend
 ```
 ---
-1. **[Frontend](https://github.com/manojsargam-dev/DRDtech-AI/blob/main/Frontend/README.md)**: Modern, responsive React 19 web application for patient intake, scan upload, and Detection  report visualization.
+1. **[Frontend](https://github.com/manojsargam-dev/DRDtech-AI/blob/main/Frontend/README.md)**: Modern, responsive React 19 web application for patient intake, scan upload, and Diagnosis  report visualization.
 2. **[Backend](https://github.com/manojsargam-dev/DRDtech-AI/blob/main/Backend/README.md)**: Node.js / Express / TypeScript API server handling user authentication, patient records, Cloudinary storage, and ML workflow orchestration.
 3. **[ML](https://github.com/manojsargam-dev/DRDtech-AI/blob/main/ML/README.md)**: Python / FastAPI deep learning microservice hosting fine-tuned **ResNet-101** (APTOS dataset) and **U-Net** (DRIVE dataset) models.
 ---
 ## 🚀 Key Features
 
 - **Automated Diabetic Retinopathy Classification**: 5-stage clinical severity grading (No DR, Mild, Moderate, Severe, Proliferative DR) using fine-tuned ResNet-101.
-- **Explainable AI (Grad-CAM Heatmaps)**: Visualizes the anatomical regions in retinal fundus images that influenced the Detection  decision.
+- **Explainable AI (Grad-CAM Heatmaps)**: Visualizes the anatomical regions in retinal fundus images that influenced the Diagnosis  decision.
 - **Retinal Blood Vessel Segmentation**: High-precision vascular tree extraction using a deep U-Net architecture.
 - **Secure Authentication & Patient Records**: End-to-end patient management with JWT-based security and MongoDB database.
 - **Cloud Image Pipeline**: Automated retinal image upload, optimization, and storage with Cloudinary.
-- **Comprehensive Detection  Reports**: Interactive visual report comparing original fundus scans, Grad-CAM overlays, and vessel segmentation masks with clinical action items.
+- **Comprehensive Diagnosis  Reports**: Interactive visual report comparing original fundus scans, Grad-CAM overlays, and vessel segmentation masks with clinical action items.
 
 ---
 
