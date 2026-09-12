@@ -1,4 +1,5 @@
 import React from 'react';
+import drdLogo from '../../assets/auth/logo2.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -8,9 +9,10 @@ const Footer = () => {
         <div className="footer-top-grid">
           {/* Brand Info */}
           <div className="footer-brand-col">
-            <h3 className="footer-brand-title">DRDtechAI</h3>
+            {/* <h3 className="footer-brand-title">DRDtechAI</h3> */}
             <div className="footer-pulse-logo">
-              <svg  
+              <img src={drdLogo} alt="DRDtech AI Logo" className="report-drd-logo1"/>
+              {/* <svg  
                 viewBox="0 0 100 40" 
                 className="footer-pulse-svg"
                 fill="none" 
@@ -23,7 +25,7 @@ const Footer = () => {
                   strokeLinecap="round" 
                   strokeLinejoin="round" 
                 />
-              </svg>
+              </svg> */}
             </div>
           </div>
 

@@ -8,7 +8,34 @@
   transition: all 0.3s ease;
   padding: 18px 0;
 }
+.report-drd-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+.brand-title-drd {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
 
+.bold-dr {
+  color: #0f172a;
+}
+
+.teal-dtech {
+  color: #2b7a8c;
+}
+
+.bold-ai {
+  color: #0f172a;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 .navbar-header.navbar-scrolled {
   background-color: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);

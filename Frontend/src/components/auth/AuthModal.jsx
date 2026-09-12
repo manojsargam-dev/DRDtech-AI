@@ -5,12 +5,29 @@ import communityImg from '../../assets/auth/community-illustration.png';
 import healthWorkersImg from '../../assets/auth/health-workers-illustration.png';
 import { X, Eye, EyeOff, Check, AlertCircle, Loader2 } from 'lucide-react';
 import { authAPI } from '../../services/api';
+import { FlagIcon } from 'react-flag-kit';
+
 
 const AuthModal = ({ isOpen, onClose, initialView = 'login', onLoginSuccess }) => {
   const [view, setView] = useState(initialView); // 'login' or 'signup'
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   const [countryCode, setCountryCode] = useState('+91');
+
+  const countries = [
+  { code: "+91", country: "IN", name: "India" },
+  { code: "+1", country: "US", name: "USA" },
+  { code: "+44", country: "GB", name: "UK" },
+  { code: "+971", country: "AE", name: "UAE" },
+  { code: "+61", country: "AU", name: "Australia" },
+  { code: "+81", country: "JP", name: "Japan" },
+  { code: "+49", country: "DE", name: "Germany" },
+  { code: "+33", country: "FR", name: "France" },
+];
+
+const selectedCountry = countries.find(
+  (country) => country.code === countryCode
+);
 
   // Form states
   const [formData, setFormData] = useState({
@@ -199,11 +216,13 @@ const AuthModal = ({ isOpen, onClose, initialView = 'login', onLoginSuccess }) =
                     <input
                       id="login-password"
                       name="password"
+                      minlength="8" 
+                      maxlength="15"
                       type={showPassword ? 'text' : 'password'}
                       required
                       value={formData.password}
                       onChange={handleInputChange}
-                      placeholder="••••••••••••"
+                      placeholder="Password"
                     />
                     <button
                       type="button"
@@ -287,30 +306,42 @@ const AuthModal = ({ isOpen, onClose, initialView = 'login', onLoginSuccess }) =
                     required
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    placeholder="Enter your full name"
+                    placeholder="Enter  your  full  name"
                   />
                 </div>
-
+                
                 <div className="form-group">
+                  
                   <label htmlFor="signup-phone">Phone Number</label>
                   <div className="phone-input-wrapper">
                     <div className="country-code-select">
-                      <span className="flag-icon">🇮🇳</span>
-                      <select 
-                        value={countryCode} 
-                        onChange={(e) => setCountryCode(e.target.value)}
-                        aria-label="Country Code"
-                      >
-                        <option value="+91">+91</option>
-                        <option value="+1">+1</option>
-                        <option value="+44">+44</option>
-                        <option value="+61">+61</option>
-                      </select>
+
+      {selectedCountry && (
+        <FlagIcon
+          code={selectedCountry.country}
+          size={20}
+          height={15}
+        />
+      )}
+
+      <select
+        value={countryCode}
+        onChange={(e) => setCountryCode(e.target.value)}
+        aria-label="Country Code"
+      >
+        {countries.map((country) => (
+          <option key={country.code} value={country.code}>
+            {country.country} {country.code}
+          </option>
+        ))}
+      </select>
                     </div>
                     <input
                       id="signup-phone"
                       name="phone"
                       type="tel"
+                      maxLength={10}
+                      pattern="[0-9]{10}"
                       required
                       value={formData.phone}
                       onChange={handleInputChange}
@@ -337,12 +368,14 @@ const AuthModal = ({ isOpen, onClose, initialView = 'login', onLoginSuccess }) =
                   <div className="password-input-wrapper">
                     <input
                       id="signup-password"
-                      name="password"
+                      name="password" 
+                      minLength={8}
+                      maxLength={15}
                       type={showPassword ? 'text' : 'password'}
                       required
                       value={formData.password}
                       onChange={handleInputChange}
-                      placeholder="••••••••••••"
+                      placeholder="Password"
                     />
                     <button
                       type="button"
@@ -356,10 +389,11 @@ const AuthModal = ({ isOpen, onClose, initialView = 'login', onLoginSuccess }) =
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="signup-worker-id">Worker ID / Government Badge Number</label>
+                  <label htmlFor="signup-worker-id">HPR ID /HFR ID/ Government Badge Number</label>
                   <input
                     id="signup-worker-id"
                     name="workerId"
+                    maxLength={14}
                     type="text"
                     required
                     value={formData.workerId}
