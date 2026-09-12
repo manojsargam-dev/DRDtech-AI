@@ -28,10 +28,12 @@
 }
 
 .report-header-container {
-  width: 75vw;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0.85rem 1.5rem;
+    width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0.85rem 24px;
+  box-sizing: border-box;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,9 +42,9 @@
 .report-header-left {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  cursor: pointer;
+  gap: 12px;
 }
+
 
 .report-drd-logo {
   height: 40px;
@@ -51,8 +53,9 @@
 }
 
 .report-brand-text {
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
   letter-spacing: -0.02em;
 }
 

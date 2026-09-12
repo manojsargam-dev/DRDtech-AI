@@ -14,7 +14,9 @@
     "dotenv": "^17.4.2",
     "lucide-react": "^1.39.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-flag-kit": "^1.1.1",
+    "react-phone-input-2": "^2.15.1"
   },
   "devDependencies": {
     "@types/react": "^19.2.18",

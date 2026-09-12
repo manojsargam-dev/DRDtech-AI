@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import drdLogo from '../../assets/auth/drd-logo.png';
 import './Navbar.css';
 
 const Navbar = ({ onGetStartedClick }) => {
@@ -15,10 +16,16 @@ const Navbar = ({ onGetStartedClick }) => {
   return (
     <header className={`navbar-header ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-container container">
-        {/* Brand Logo */}
+        <div className="header-left">
+        <img src={drdLogo} alt="DRDtech AI Logo" className="report-drd-logo"/>
         <a href="#hero" className="navbar-brand">
-          <span className="brand-name">DRDtech AI</span>
+          <span className="brand-title-drd">
+              <span className="bold-dr">DR</span>
+              <span className="teal-dtech">Dtech</span>{' '}
+              <span className="bold-ai">AI</span>
+            </span>
         </a>
+        </div>
 
         {/* Navigation Links */}
         <nav className="navbar-links">

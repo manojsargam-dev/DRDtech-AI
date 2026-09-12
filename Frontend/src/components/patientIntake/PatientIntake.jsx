@@ -15,7 +15,10 @@ import {
   Eye, 
   FileCheck,
   AlertCircle,
-  Camera
+  Camera,
+  ScanSearch,
+  ScanEye,
+  Eraser
 } from 'lucide-react';
 import { scanAPI } from '../../services/api';
 
@@ -31,7 +34,8 @@ const PatientIntake = ({ currentUser, onLogout }) => {
     sugarLevel: '',
     age: '',
     gender: '',
-    eyeSide: ''
+    eyeSide: '',
+    Duration:''
   });
 
   // Drag & Drop / File State
@@ -241,7 +245,7 @@ const PatientIntake = ({ currentUser, onLogout }) => {
         <div className="intake-wrapper">
           {/* Greeting Titles */}
           <div className="intake-title-section">
-            <p className="intake-subtitle">Namaste, {workerDisplayName}</p>
+            <p className="intake-subtitle">Welcome Back !!!, 🧑🏽‍⚕️{workerDisplayName}</p>
             <h1 className="intake-main-heading">Add New Patient Details</h1>
           </div>
 
@@ -269,12 +273,12 @@ const PatientIntake = ({ currentUser, onLogout }) => {
           <div className="intake-grid">
             {/* LEFT MAIN CARD: PATIENT INTAKE & RETINA SCAN UPLOAD */}
             <div className="intake-card intake-left-card">
-              <h3 className="section-label">LINK PATIENT DETAILS (QUICK INTAKE)</h3>
+              <h3 className="section-label">PATIENT DETAILS (QUICK INTAKE)</h3>
 
               {/* Form Row 1: 4 columns */}
               <div className="form-row-4">
                 <div className="intake-input-group">
-                  <label>Patient Full Name *</label>
+                  <label>Patient Full Name </label>
                   <input
                     type="text"
                     name="fullName"
@@ -288,22 +292,27 @@ const PatientIntake = ({ currentUser, onLogout }) => {
                 <div className="intake-input-group">
                   <label>Contact Number</label>
                   <input
-                    type="text"
+                    type="tel"
                     name="patientNumber"
+                    inputmode="numeric"
+                    maxLength={10}
+                    pattern='[0-9]{10}'
                     value={formData.patientNumber}
                     onChange={handleInputChange}
-                    placeholder="e.g.+91-XXXXXX8976"
+                    placeholder="XXXXXX8976"
                   />
                 </div>
 
                 <div className="intake-input-group">
-                  <label>National Health ID / ABHA</label>
+                  <label>Health ID (optional)</label>
                   <input
                     type="text"
                     name="abhaNumber"
+                    inputmode="numeric"
+                    maxLength={14}
                     value={formData.abhaNumber}
                     onChange={handleInputChange}
-                    placeholder="14-digit ABHA Number"
+                    placeholder="14-digit NHI"
                   />
                 </div>
 
@@ -312,6 +321,8 @@ const PatientIntake = ({ currentUser, onLogout }) => {
                   <input
                     type="text"
                     name="sugarLevel"
+                    inputmode="numeric"
+                    maxLength={3}
                     value={formData.sugarLevel}
                     onChange={handleInputChange}
                     placeholder="e.g. 165 mg/dL"
@@ -324,8 +335,10 @@ const PatientIntake = ({ currentUser, onLogout }) => {
                 <div className="intake-input-group group-age">
                   <label>Age (Years)</label>
                   <input
-                    type="number"
+                    type="text"
                     name="age"
+                    inputmode="numeric"
+                    maxLength={3}
                     value={formData.age}
                     onChange={handleInputChange}
                     placeholder="e.g. 54"
@@ -364,13 +377,25 @@ const PatientIntake = ({ currentUser, onLogout }) => {
                     <ChevronDown size={16} className="select-chevron" />
                   </div>
                 </div>
+                  <div className="intake-input-group">
+                  <label>Diabetes Duration (Years)</label>
+                  <input
+                    type="text"
+                    name="Duration"
+                    inputmode="numeric"
+                    maxLength={2}
+                    value={formData.Duration}
+                    onChange={handleInputChange}
+                    placeholder="e.g.9"
+                  />
+                </div>
               </div>
 
               {/* RETINA SCAN IMAGE UPLOAD SECTION */}
               <div className="retina-upload-section">
                 <h3 className="retina-section-title">Retina Scan Image Upload</h3>
                 <p className="retina-section-desc">
-                  Capture and upload high-resolution fundus photograph for analysis
+                  Capture and upload  fundus photograph for analysis
                 </p>
 
                 {/* Drag & Drop Upload Zone */}
@@ -447,8 +472,9 @@ const PatientIntake = ({ currentUser, onLogout }) => {
                   onClick={handleClear}
                   disabled={analyzing}
                 >
-                  Clear Fields
-                </button>
+                <Eraser size={18} />
+                <span>Clear Fields</span>
+                </button> 
 
                 <button 
                   type="button" 
@@ -463,7 +489,7 @@ const PatientIntake = ({ currentUser, onLogout }) => {
                     </>
                   ) : (
                     <>
-                      <Scan size={18} />
+                      <ScanEye size={18} />
                       <span>Initiate AI Scan Analysis</span>
                     </>
                   )}
@@ -537,7 +563,7 @@ const PatientIntake = ({ currentUser, onLogout }) => {
 
               {/* Target Retina View Reference Box */}
               <div className="target-retina-box">
-                <span className="target-retina-label">TARGET RETINA VIEW REFERENCE</span>
+                <span className="target-retina-label">RETINA VIEW REFERENCE</span>
                 <div className="retina-reference-img-container">
                   <img 
                     src={retinaRefImg} 

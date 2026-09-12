@@ -1,5 +1,6 @@
 import React from 'react';
 import './Team.css';
+import professional from '../../assets/professional.jpg'
 
 const teamMembers = [
   {
@@ -65,24 +66,7 @@ const Team = () => {
               {/* Avatar & Hover Social Overlay Container */}
               <div className="team-avatar-container">
                 <div className="team-avatar-graphic">
-                  <svg 
-                    viewBox="0 0 160 160" 
-                    className="avatar-svg"
-                    fill="none" 
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    {/* Soft Slate-Lavender Circular Background */}
-                    <circle cx="80" cy="80" r="76" fill="#a4b1dc" />
-                    
-                    {/* Head Silhouette */}
-                    <circle cx="80" cy="58" r="28" fill="#ffffff" />
-                    
-                    {/* Torso / Shoulders Silhouette */}
-                    <path 
-                      d="M28 140 C32 104 55 94 80 94 C105 94 128 104 132 140 Z" 
-                      fill="#ffffff" 
-                    />
-                  </svg>
+                  <img src={professional} alt="Blank Logo" className="teamlogo"></img>
                 </div>
 
                 {/* Dynamic Hover Pop-up Social Ribbon */}

@@ -222,7 +222,7 @@ const DiagnosticReport = ({
               <p style={{ margin: '4px 0 0', fontWeight: '700', color: '#1e293b', fontSize: '15px' }}>{patientData.fullName || 'Patient'}</p>
             </div>
             <div>
-              <span style={{ fontSize: '11px', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Patient ID</span>
+              <span style={{ fontSize: '11px', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Patient Contact NO.</span>
               <p style={{ margin: '4px 0 0', fontWeight: '600', color: '#334155' }}>{patientData.patientNumber || 'PT-N/A'}</p>
             </div>
             <div>
@@ -233,12 +233,16 @@ const DiagnosticReport = ({
               <span style={{ fontSize: '11px', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Sugar Level</span>
               <p style={{ margin: '4px 0 0', fontWeight: '600', color: '#334155' }}>{patientData.sugarLevel ? `${patientData.sugarLevel} mg/dL` : 'Normal'}</p>
             </div>
-            <div>
-              <span style={{ fontSize: '11px', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Eye Scanned</span>
-              <p style={{ margin: '4px 0 0', fontWeight: '600', color: '#0d9488' }}>{patientData.eyeSide || 'Right Eye (OD)'}</p>
+              <div>
+              <span style={{ fontSize: '11px', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Diabetes Duration (Years)</span>
+              <p style={{ margin: '4px 0 0', fontWeight: '600', color: '#334155' }}>{patientData.Duration || 'Not Linked'}</p>
             </div>
             <div>
-              <span style={{ fontSize: '11px', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>ABHA Number</span>
+              <span style={{ fontSize: '11px', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>Eye Scanned</span>
+              <p style={{ margin: '4px 0 0', fontWeight: '700', color: '#8e094c' }}>{patientData.eyeSide || 'Right Eye (OD)'}</p>
+            </div>
+            <div>
+              <span style={{ fontSize: '11px', color: '#64748b', textTransform: 'uppercase', fontWeight: '600' }}>NIH Number</span>
               <p style={{ margin: '4px 0 0', fontWeight: '600', color: '#334155' }}>{patientData.abhaNumber || 'Not Linked'}</p>
             </div>
           </div>
